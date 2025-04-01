@@ -1,0 +1,13 @@
+Requerimientos:
+	JDK 23 o superior instalado en <DIR_JDK>
+	Módulos de JavaFX 23 o superior, instalados en <DIR_JAVAFX>
+
+Para compilar desde el directorio del proyecto (en Linux):
+	Linux: <DIR_JDK>/bin/javac -g -d compilados --module-path <DIR_JAVAFX>/lib --add-modules javafx.fxml,javafx.controls $(find fuentes -name *.java)
+	Windows: for /r "fuentes" %i in (*.java) do javac -g -d compilados "%i"
+	PowerShell: Get-ChildItem -Path "fuentes" -Filter "*.java" -Recurse | ForEach-Object {javac -g -d compilados $_.FullName}
+	
+Copiar los recursos:
+	cp -R recursos/* compilados/
+
+Ejecutar la aplicación:
