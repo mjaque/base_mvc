@@ -5,6 +5,6 @@
 
 <HBox alignment="CENTER" prefHeight="200.0" prefWidth="400.0" spacing="20.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
 	<children>
-		<Label text="Vista1.1" />
+		<Label text="Vista 1" />
 	</children>
 </HBox>
