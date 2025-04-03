@@ -5,8 +5,6 @@ import javafx.scene.Scene;
 import javafx.scene.Parent;
 import javafx.scene.layout.VBox;
 import javafx.scene.layout.HBox;
-import javafx.event.EventHandler;
-import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.fxml.FXML;
 
@@ -50,12 +48,9 @@ public class ControladorPrincipal extends Controlador{
 	}
 
 	private void capturarEventos(){
-		//Utilizamos clases anónima
-		boton1.setOnAction(new EventHandler<ActionEvent>() {
-			@Override
-			public void handle(ActionEvent evento){
+		//Utilizamos función lambda para implementar anónimamente un EventHandler
+		boton1.setOnAction(evento -> {
 				System.out.println("Se ha pulsado el botón 1.");
-			}
 		});
 	}
 }
