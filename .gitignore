@@ -24,7 +24,7 @@ hs_err_pid*
 replay_pid*
 
 # Ficheros temporales de vim
-.swp
+*.swp
 
 # Archivos compilados
 compilados/*
