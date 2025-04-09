@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.layout.VBox;
 import javafx.scene.layout.HBox;
 import javafx.scene.control.Button;
+import javafx.scene.input.KeyEvent;
 import javafx.fxml.FXML;
 
 import com.migueljaque.modelos.Modelo;
@@ -48,9 +49,25 @@ public class ControladorPrincipal extends Controlador{
 	}
 
 	private void capturarEventos(){
-		//Utilizamos función lambda para implementar anónimamente un EventHandler
+		//Utilizamos funciones lambda para implementar anónimamente EventHandlers
+		//Captura de teclado
+		vista1.addEventFilter(KeyEvent.KEY_PRESSED, evento -> {
+			System.out.println(evento);
+			System.out.println("1. Se ha pulsado la tecla " + evento.getCode());
+		});
+		vista1.setOnKeyPressed(evento -> {
+			System.out.println(evento);
+			System.out.println("2. Se ha pulsado la tecla " + evento.getCode());
+		});
+		//Captura de click
 		boton1.setOnAction(evento -> {
-				System.out.println("Se ha pulsado el botón 1.");
+			System.out.println(evento);
+			System.out.println("Se ha pulsado el botón 1.");
+		});
+		//Movimiento de ratón
+		boton1.setOnMouseEntered(evento -> {
+			System.out.println(evento);
+			System.out.println("El ratón entra en el botón.");
 		});
 	}
 }
